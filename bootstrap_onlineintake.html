@@ -18,25 +18,58 @@
     <label><input type="radio" name="appselector" value="GENERAL">None of the above choices apply to me.</label><br>
   </div>
 </div>
-<p>* I understand I will be contacted by email. Only people I trust have access to the email address in my applcation. <label class="checkbox-inline"><input type="checkbox" value="emailsafe">I agree.</label></p>
+<hr class="half-rule"/>
+<p>* I understand I will be contacted by email. Only people I trust have access to the email address in my application.
+<div class="checkbox">
+<label class="checkbox-inline"><input type="checkbox" value="emailsafe"> I agree.</label>
+</div>
+</p>
+<hr class="half-rule"/>
 <p>Provide an Email Address where it is safe to contact you:</p>
-<div class="form-group col-xs-4">
+
+<div class="form-group">
   <label for="eml">Email Address:</label>
   <input type="email" class="form-control" id="eml">
 </div>
-<div class="form-group col-xs-4">
+<div class="form-group">
   <label for="eml">Confirm Email Address:</label>
   <input type="email" class="form-control" id="emlconfirm">
 </div>
-First Name
-Middle Initial
-Last Name
-Suffix
-If you have gone by other names, such as a maiden name,list it here. Do not worry if you are unable to list all of your other names.
-First Name
-Middle Initial
-Last Name
-Suffix
+
+<div class="form-group">
+  <label for="first_name">First Name</label>
+  <input type="text" class="form-control" id="first_name">
+</div>
+<div class="form-group">
+  <label for="middle_initial">Middle Initial</label>
+  <input type="text" class="form-control" id="middle_initial" maxlength="1">
+</div>
+<div class="form-group">
+  <label for="last_name">Last Name</label>
+  <input type="text" class="form-control" id="last_name"><br>
+</div>
+<div class="form-group">
+  <label for="suffix_name">Suffix</label>
+  <input type="text" class="form-control" id="suffix_name" maxlength="4">
+</div>
+<hr class="half-rule"/>
+If you have gone by other names, such as a maiden name,list it here. Do not worry if you are unable to list all of your other names.<br>
+<div class="form-group">
+  <label for="alias_first">First Name</label>
+  <input type="text" class="form-control" id="alias_first">
+</div>
+<div class="form-group">
+  <label for="alias_middle">Middle Initial</label>
+  <input type="text" class="form-control" id="alias_middle" maxlength="1">
+</div>
+<div class="form-group">
+  <label for="alias_last">Last Name</label>
+  <input type="text" class="form-control" id="alias_last"><br>
+</div>
+<div class="form-group">
+  <label for="alias_suffix">Suffix</label>
+  <input type="text" class="form-control" id="alias_suffix" maxlength="4">
+</div>
 Provide a safe mailing address
 Street Address / PO Box
 Apartment or Lot Number
@@ -89,6 +122,7 @@ Housing Authority
 Legal Aid of Nebraska Website
 Mark ALL of the time periods you are available to receive a call from Legal Aid:
 How can Legal Aid of Nebraska improve our online application?
+</p>
 <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </body>
