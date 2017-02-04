@@ -4,10 +4,15 @@
 <Title>Legal Aid of Nebraska Online Application for Services</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/conditionize.jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$('.UNIT_AL').conditionize();
+</script>
+
 </head>
 <body>
-<form>
+<form style="margin-left: 30px; margin-right: 30px">
 <div class="form-group">
   <div class="radio">
     <label><input type="radio" name="appselector" value="NATIVE">I am Native American or have a case in tribal court.</label><br>
@@ -52,6 +57,8 @@
   <label for="suffix_name">Suffix</label>
   <input type="text" class="form-control" id="suffix_name" maxlength="4">
 </div>
+Provide the last four digits of your social security number or ITIN number
+Provide your date of birth
 <hr class="half-rule"/>
 <h4>Aliases: </h4>
 If you have gone by other names, such as a maiden name,list it here. Do not worry if you are unable to list all of your other names.<br><br>
@@ -117,20 +124,97 @@ Do you need an interpreter?
     <label><input type="radio" name="interpreter" value="no">No</label><br>
   </div>
 </div>
-If yes, indicate what language [Languages List]
-Do you use a tele communication device or relay system for the hearing and spech-impaired?
+<div class="form-group">
+  <label for="language">If you do need an interpreter, what language should the interpreter speak?</label>
+  <select name="language" id="language" class="form-control">
+    <option  value="">&nbsp;</option>
+    <option  value="A">Albanian</option>
+    <option  value="B">Cambodian</option>
+    <option  value="C">Creole</option>
+    <option  value="D">Somali</option>
+    <option  value="E">English</option>
+    <option  value="F">French</option>
+    <option  value="G">German</option>
+    <option  value="H">Sign Language</option>
+    <option  value="I">Italian</option>
+    <option  value="J">Japanese</option>
+    <option  value="L">Hmong</option>
+    <option  value="M">Mandarin</option>
+    <option  value="N">Native American</option>
+    <option  value="O">Other</option>
+    <option  value="P">Polish</option>
+    <option  value="Q">Arabic</option>
+    <option  value="R">Russian</option>
+    <option  value="S">Spanish</option>
+    <option  value="T">Turkish</option>
+    <option  value="V">Vietnamese</option>
+    <option  value="W">Serbian</option>
+    <option  value="X">Cantonese</option>
+    <option  value="Y">Yiddish</option>
+    <option  value="z">Nuer</option>
+    <option  value="aa">Dinka</option>
+    <option  value="bb">Nubian</option>
+    <option  value="K">Karen</option>
+  </select>
+</div>
+
+Do you use a telecommunication device or relay system for the hearing and speach-impaired?
+<div class="form-group">
+  <div class="radio">
+    <label><input type="radio" name="hearingimpairment" value="yes" required>Yes</label><br>
+    <label><input type="radio" name="hearingimpairment" value="no">No</label><br>
+  </div>
+</div>
 Mark ALL of the time periods you are available to receive a call from Legal Aid:
+<div class="UNIT_AL" data-cond-option="appselector" data-cond-value="GENERAL"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+</div>
+
 <h3>Demographics</h3>
 <hr class="half-rule"/>
-In the past 2 years, have you been a migrant or agricultural worker or worked in the meat packing industry?
-Are you disabled or handicapped?
-Have you served in the military, National Guard or Reserves?
-Has anyone else in your household served in the Military, National Guard or Reserves?
-Provide the last 4 digits of your Social Security Number:
-Date of Birth ( mm/dd/yyyy ):
-Marital Status: Single, Married, Divorced, Widowed, Legally Separated, Domestic Partner
-Race/Ethnicity: Asian, White/Caucasian, Native American/Indian, Black/African American, Hispanic/Latino, Other
-Gender: Male/Female
+<div class="checkbox">
+  <label><input type="checkbox" name="agworker" value="">In the past 2 years, I have been a migrant or agricultural worker or worked in the meat packing industry</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="disabled" value="">I am disabled or handicapped.</label>
+</div>
+<div class="checkbox">
+      <label><input type="checkbox" name="military" value="">I have served in the military, National Guard or Reserves.</label>
+</div>
+<div class="checkbox">
+      <label><input type="checkbox" name="milhousehold" value="">Someone else in my household served in the Military, National Guard or Reserves.</label>
+</div>
+<div class="form-group">
+      <label for="marital">My marital status is:</label>
+  <select name="marital" id="marital" class="form-control">
+      <option value="">&nbsp;</option>
+      <option value="">Single</option>
+      <option value="">Married</option>
+      <option value="">Divorced</option>
+      <option value="">Widowed</option>
+      <option value="">Legally Separated</option>
+      <option value="">Domestic Partner</option>
+  </select>
+</div>
+      Race/Ethnicity: Asian, White/Caucasian, Native American/Indian, Black/African American, Hispanic/Latino, Other
+      When I was born, I was assigned gender  Male/Female
+<div class="checkbox">
+      <label><input type="checkbox" name="trans" value="">Today, my gender identity differs from the gender I was assigned at birth.</label>
+</div>
 <h3>Eligibility</h3>
 <hr class="half-rule"/>
 Are you a citizen of the United States?
@@ -152,22 +236,28 @@ Case Number:
 Opposing Party: First Name, Middle Initial, Last Name, Suffix (Jr., Sr., etc), Date of Birth ( mm/dd/yyyy )
 <h3>Referral Information</h3>
 <hr class="half-rule"/>
-How did you hear about Legal Aid of Nebraska?
-Self
-Private Attorney
-Child Support Enforcement
-Health and Human Services
-County or District Court
-Other Legal Service Program
-Other
-United Way
-Code Enforcement
-Domestic Violence program
-Friend/Family member
-Housing Authority
-Legal Aid of Nebraska Website
-
-How can Legal Aid of Nebraska improve our online application?
+<div class="form-group">
+  <label for="referral">How did you hear about Legal Aid of Nebraska?</label> 
+  <select name="referral" id="referral" class="form-control">
+    <option value="">Self</option>
+    <option value="">Private Attorney</option>
+    <option value="">Child Support Enforcement</option>
+    <option value="">Health and Human Services</option>
+    <option value="">County or District Court</option>
+    <option value="">Other Legal Service Program</option>
+    <option value="">Other</option>
+    <option value="">United Way</option>
+    <option value="">Code Enforcement</option>
+    <option value="">Domestic Violence program</option>
+    <option value="">Friend/Family member</option>
+    <option value="">Housing Authority</option>
+    <option value="">Legal Aid of Nebraska Website</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="improvement">How can Legal Aid of Nebraska improve our online application?</label>
+  <textarea class="form-control" rows="5" id="improvement"></textarea>
+</div>
 </p>
 <button type="submit" class="btn btn-default">Submit</button>
 </form>
