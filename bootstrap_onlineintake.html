@@ -8,6 +8,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
 $('.UNIT_AL').conditionize();
+$('.UNIT_NAT').conditionize();
+$('.UNIT_ELD').conditionize();
+$('.UNIT_CAN').conditionize();
+$('.UNIT_DST').conditionize();
+$('.UNIT_FARM').conditionize();
 </script>
 
 </head>
@@ -165,8 +170,99 @@ Do you use a telecommunication device or relay system for the hearing and speach
     <label><input type="radio" name="hearingimpairment" value="no">No</label><br>
   </div>
 </div>
+<!-- Times block for General intake -->
 Mark ALL of the time periods you are available to receive a call from Legal Aid:
 <div class="UNIT_AL" data-cond-option="appselector" data-cond-value="GENERAL"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+</div>
+<!-- Times block for Native intake -->
+<div class="UNIT_NAT" data-cond-option="appselector" data-cond-value="NATIVE"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullpm" value="">Tuesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullpm">Thursdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullpm">Fridays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+</div>
+<!-- Times block for Farm intake -->
+<div class="UNIT_FARM" data-cond-option="appselector" data-cond-value="ELDER"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+</div>
+<!-- Times block for Elder intake -->
+<div class="UNIT_ELD" data-cond-option="appselector" data-cond-value="FARM"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+</div>
+<!-- Times block for Cancer intake -->
+<div class="UNIT_CAN" data-cond-option="appselector" data-cond-value="CANCER"> 
+  <div class="checkbox">
+    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+  </div>
+</div>
+<!-- Times block for Disaster intake -->
+<div class="UNIT_DST" data-cond-option="appselector" data-cond-value="DISASTER"> 
   <div class="checkbox">
     <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
   </div>
