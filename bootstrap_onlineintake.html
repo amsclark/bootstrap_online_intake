@@ -4,30 +4,63 @@
 <Title>Legal Aid of Nebraska Online Application for Services</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/conditionize.jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/w3data.js"></script>
 <script>
-$('.UNIT_AL').conditionize();
-$('.UNIT_NAT').conditionize();
-$('.UNIT_ELD').conditionize();
-$('.UNIT_CAN').conditionize();
-$('.UNIT_DST').conditionize();
-$('.UNIT_FARM').conditionize();
-</script>
+$(document).ready(function() {
+  $("input[name='appselector']").change(function(){
+    $('.appblock').hide();
+    console.log("appblock hidden");
+    $('#' + $(this).val()).show();
+    console.log("block shown");
+  });
+});
 
+</script>
 </head>
 <body>
+<h2>Choose the sentence that best describes you, or the person who is applying for services: </h2>
+<h2>Elige la frase que mejor le describe a usted o a la persona que solicita nuestros servicios:</h2>
 <form style="margin-left: 30px; margin-right: 30px">
 <div class="form-group">
-  <div class="radio">
+  <div id="appselectorgroup" class="radio">
     <label><input type="radio" name="appselector" value="NATIVE">I am Native American or have a case in tribal court.</label><br>
     <label><input type="radio" name="appselector" value="FARM">I am a Farmer or Rancher.</label><br>
     <label><input type="radio" name="appselector" value="ELDER">I am 60 years of age or older.</label><br>
     <label><input type="radio" name="appselector" value="CANCER">I have been diagnosed with breast cancer.</label><br>
     <label><input type="radio" name="appselector" value="DISASTER">I am a victim of a recent disaster, such as a flood, tornado or train derailment.</label><br>
-    <label><input type="radio" name="appselector" value="GENERAL" required>None of the above choices apply to me.</label><br>
+    <label><input type="radio" name="appselector" value="GENERAL" >None of the above choices apply to me.</label><br>
+    <label><input type="radio" name="appselector" value="SPANISH" required>El español es mi idioma materno, o prefiero hablar en español.</label><br>
   </div>
 </div>
+
+<div id="CANCER" class="appblock" style="display: none">
+<div w3-include-html="can.html"></div> 
+</div>
+
+<div id="DISASTER" class="appblock" style="display: none">
+<div w3-include-html="dst.html"></div> 
+</div>
+
+<div id="ELDER" class="appblock" style="display: none">
+<div w3-include-html="eld.html"></div> 
+</div>
+
+<div id="FARM" class="appblock" style="display: none">
+<div w3-include-html="frm.html"></div> 
+</div>
+
+<div id="NATIVE" class="appblock" style="display: none">
+<div w3-include-html="nat.html"></div> 
+</div>
+
+<div id="GENERAL" class="appblock" style="display: none">
+<div w3-include-html="gen.html"></div> 
+</div>
+
+<script>w3IncludeHTML();</script>
+
+<div style="display:none">
 <hr class="half-rule"/>
 <p>* I understand I will be contacted by email. Only people I trust have access to the email address in my application.
 <div class="checkbox">
@@ -170,115 +203,12 @@ Do you use a telecommunication device or relay system for the hearing and speach
     <label><input type="radio" name="hearingimpairment" value="no">No</label><br>
   </div>
 </div>
-<!-- Times block for General intake -->
-Mark ALL of the time periods you are available to receive a call from Legal Aid:
-<div class="UNIT_AL" data-cond-option="appselector" data-cond-value="GENERAL"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-</div>
-<!-- Times block for Native intake -->
-<div class="UNIT_NAT" data-cond-option="appselector" data-cond-value="NATIVE"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullpm" value="">Tuesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullpm">Thursdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullpm">Fridays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-</div>
-<!-- Times block for Farm intake -->
-<div class="UNIT_FARM" data-cond-option="appselector" data-cond-value="ELDER"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-</div>
-<!-- Times block for Elder intake -->
-<div class="UNIT_ELD" data-cond-option="appselector" data-cond-value="FARM"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-</div>
-<!-- Times block for Cancer intake -->
-<div class="UNIT_CAN" data-cond-option="appselector" data-cond-value="CANCER"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-</div>
-<!-- Times block for Disaster intake -->
-<div class="UNIT_DST" data-cond-option="appselector" data-cond-value="DISASTER"> 
-  <div class="checkbox">
-    <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
-  </div>
-</div>
+
+
+
+
+
+
 
 <h3>Demographics</h3>
 <hr class="half-rule"/>
@@ -355,7 +285,8 @@ Opposing Party: First Name, Middle Initial, Last Name, Suffix (Jr., Sr., etc), D
   <textarea class="form-control" rows="5" id="improvement"></textarea>
 </div>
 </p>
-<button type="submit" class="btn btn-default">Submit</button>
+</div>
+
 </form>
 </body>
 </html>
