@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- includes the first page of disclaimers, etc after choosing an app. All are the same except the Farm app so its not used there-->
 <script src="js/w3data.js"></script>
@@ -36,24 +37,33 @@ We will reply to you by email.<br>
 <p>You should expect to receive an email response about your application from Legal Aid of Nebraska within 5 business days. If it looks like you qualify for services from Legal Aid, we will schedule a call for you to talk to an intake paralegal. We will schedule the call based upon the best times you provide us in the application. We will tell you what day and time we will call you in our email response to you. If you do not hear back from us, it is your responsibility to contact us at the number above. Legal Aid of Nebraska is not responsible for any technical or human errors that may occur when processing your application. Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
 <br>
 I have read the above information and agree to the terms described.<br>
-
 <button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
-    <!-- Times block for Native intake -->
-    <div class="UNIT_NAT"> 
-    <div class="checkbox">
-        <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" name="tuefullpm" value="">Tuesdays between 12:30PM and 4:00PM Central Standard Time</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="thufullpm">Thursdays between 12:30PM and 4:00PM Central Standard Time</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="frifullpm">Fridays between 12:30PM and 4:00PM Central Standard Time</label>
-    </div>
+<div style="display:none" id="applicantagreed"> 
+        <!-- Times block for Native intake -->
+        Mark ALL of the time periods you are available to receive a call from Legal Aid:
+        <div class="UNIT_NAT"> 
+        <div class="checkbox">
+            <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="tuefullpm" value="">Tuesdays between 12:30PM and 4:00PM Central Standard Time</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="thufullpm">Thursdays between 12:30PM and 4:00PM Central Standard Time</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="frifullpm">Fridays between 12:30PM and 4:00PM Central Standard Time</label>
+        </div>
+        </div>
     </div>
 </div>
+<script>
+$( "#agreed" ).click(function() {
+  $( "#applicantagreed" ).fadeIn( "slow", function() {
+    // Animation complete
+  });
+});
+</script>

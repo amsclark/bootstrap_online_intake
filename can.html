@@ -1,6 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- includes the first page of disclaimers, etc after choosing an app. All are the same except the Farm app so its not used there-->
 <script src="js/w3data.js"></script>
+    </head>
+    <body>
+
 <div w3-include-html="allengexceptfrm.html"></div> 
 <script>w3IncludeHTML();</script>
 <!--done including first page of disclaimers-->
@@ -30,6 +37,7 @@
 
 <div style="display:none" id="applicantagreed">
     <!-- Times block for Cancer intake -->
+    <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
     <div class="UNIT_CAN"> 
     <div class="checkbox">
         <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
@@ -48,4 +56,13 @@
     </div>
     </div>
 </div>
+<script>
+$( "#agreed" ).click(function() {
+  $( "#applicantagreed" ).fadeIn( "slow", function() {
+    // Animation complete
+  });
+});
+</script>
 </div>
+</body>
+</html>
