@@ -1,11 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<Title>Legal Aid of Nebraska Online Application for Services</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/w3data.js"></script>
 <script>
 $(document).ready(function() {
   $("input[name='appselector']").change(function(){
@@ -15,7 +7,6 @@ $(document).ready(function() {
     console.log("block shown");
   });
 });
-
 </script>
 </head>
 <body>
@@ -34,31 +25,6 @@ $(document).ready(function() {
   </div>
 </div>
 
-<div id="CANCER" class="appblock" style="display: none">
-<div w3-include-html="can.html"></div> 
-</div>
-
-<div id="DISASTER" class="appblock" style="display: none">
-<div w3-include-html="dst.html"></div> 
-</div>
-
-<div id="ELDER" class="appblock" style="display: none">
-<div w3-include-html="eld.html"></div> 
-</div>
-
-<div id="FARM" class="appblock" style="display: none">
-<div w3-include-html="frm.html"></div> 
-</div>
-
-<div id="NATIVE" class="appblock" style="display: none">
-<div w3-include-html="nat.html"></div> 
-</div>
-
-<div id="GENERAL" class="appblock" style="display: none">
-<div w3-include-html="gen.html"></div> 
-</div>
-
-<script>w3IncludeHTML();</script>
 
 <div style="display:none">
 <hr class="half-rule"/>
@@ -288,6 +254,4 @@ Opposing Party: First Name, Middle Initial, Last Name, Suffix (Jr., Sr., etc), D
 </div>
 
 </form>
-</body>
-</html>
 
