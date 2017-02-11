@@ -1,50 +1,83 @@
 <div class="well" style="color:red">
-    <p>Do not use this application if you have an emergency, such as a deadline or hearing within 14 days.</p>
+  <p>Do not use this application if you have an emergency, such as a deadline or hearing within 14 days.</p>
 </div>
-<p>Instead, please call us at 402-348-1060, or toll-free at 877-250-2016, Monday and Wednesday, 9 am — 11 am CST, and on Tuesday and Thursday from 1:30 pm — 3:30 pm CST.</p>
-<p><strong>You must have an email address to use this online application.</strong></p>
-<p>We will reply to you by email.</p>
-<p><strong>We will ask you questions about your monthly household income and assets. If you do not have that information for all members of your household, please gather it, and then complete the application.</strong></p>
-<p>Legal Aid of Nebraska will use the information you provide to see if you qualify for our services. However, completing an application does NOT mean that Legal Aid of Nebraska will accept your case. Legal Aid of Nebraska cannot assist everyone who applies for help. Completing an application does NOT create an attorney-client relationship. And, it does NOT mean you are a client of Legal Aid of Nebraska.</p>
-<p><strong>Legal Aid of Nebraska cannot help with the following</strong></p>
-<ul class="list-unstyled">
-<li>&#8226; Traffic tickets</li>
-<li>&#8226; Criminal cases (unless they are filed in tribal court)</li>
-<li>&#8226; Worker's compensation cases</li>
-<li>&#8226; Personal injury cases</li>
-</ul>
-<p>It is ok to have someone help you complete this application. The application should be completed using your personal information. But, we cannot talk to someone else about your legal problem until we talk to you.</p>
 
-<p>You should expect to receive an email response about your application from Legal Aid of Nebraska within 5 business days. If it looks like you qualify for services from Legal Aid, we will schedule a call for you to talk to an intake paralegal. We will schedule the call based upon the best times you provide us in the application. We will tell you what day and time we will call you in our email response to you. If you do not hear back from us, it is your responsibility to contact us at the number above. Legal Aid of Nebraska is not responsible for any technical or human errors that may occur when processing your application.</p>
+<div>
+  <p>Instead, please call us at 402-348-1060, or toll-free at 877-250-2016, Monday and Wednesday, 9 am — 11 am CST, and on Tuesday and Thursday from 1:30 pm — 3:30 pm CST.</p>
+  <p><strong>You must have an email address to use this online application.</strong></p>
+  <p>We will reply to you by email.</p>
+  <p><strong>We will ask you questions about your monthly household income and assets. If you do not have that information for all members of your household, please gather it, and then complete the application.</strong></p>
+  <p>Legal Aid of Nebraska will use the information you provide to see if you qualify for our services. However, completing an application does NOT mean that Legal Aid of Nebraska will accept your case. Legal Aid of Nebraska cannot assist everyone who applies for help. Completing an application does NOT create an attorney-client relationship. And, it does NOT mean you are a client of Legal Aid of Nebraska.</p>
+  <p><strong>Legal Aid of Nebraska cannot help with the following</strong></p>
+  <ul class="list-unstyled">
+    <li>&#8226; Traffic tickets</li>
+    <li>&#8226; Criminal cases (unless they are filed in tribal court)</li>
+    <li>&#8226; Worker's compensation cases</li>
+    <li>&#8226; Personal injury cases</li>
+  </ul>
+</div>
 
-<p>Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
-<p>I have read the information above and agree to the terms described.</p>
-<button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
-<br>
-<div style="display:none" id="applicantagreed"> 
-<!-- Times block for General intake -->
-<p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
-    <div class="UNIT_AL"> 
+<div>
+  <hr class="half-rule">
+  <p>It is ok to have someone help you complete this application. The application should be completed using your personal information. But, we cannot talk to someone else about your legal problem until we talk to you.</p>
+  <p>You should expect to receive an email response about your application from Legal Aid of Nebraska within 5 business days. If it looks like you qualify for services from Legal Aid, we will schedule a call for you to talk to an intake paralegal. We will schedule the call based upon the best times you provide us in the application. We will tell you what day and time we will call you in our email response to you. If you do not hear back from us, it is your responsibility to contact us at the number above. Legal Aid of Nebraska is not responsible for any technical or human errors that may occur when processing your application.</p>
+  <p>Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
+  <div class="well">
+    <p>Please click "I agree" below if you have read the information above and agree to the terms described.</p>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg" id="genagreed">I agree</button>
+  <br>
+</div>
+
+<div style="display:none" id="genapplicantagreed"> 
+  <br>
+  <p>* I understand I will be contacted by email. Only people I trust have access to the email address in my application</p>
+  <div class="form-group">
     <div class="checkbox">
-        <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" id="emailsafe" data-error="You must indicate that it is safe for us to respond to your application by email. If you do not have a safe email address, please apply by telephone." required> I agree.
+      </label>
+      <div class="help-block with-errors">
+      </div>
+    </div>
+  </div>
+  <hr class="half-rule">
+  <p> Provide an Email Address where it is safe to contact you:</p>
+  <div class="form-group">
+    <label for="eml" class="control-label">Email Address:</label>
+    <input type="email" class="form-control" id="eml" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <label for="eml">Confirm Email Address:</label>
+    <input type="email" class="form-control" id="emlconfirm" data-match="#eml" data-match-error="Oops, these don't match!" placeholder="confirm" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  <hr class="half-rule">
+  <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
+  <div class="UNIT_AL"> 
+    <div class="checkbox">
+      <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-        <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-        <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+      <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-        <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-        <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
-    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
 </div>
 <script>
-$( "#agreed" ).click(function() {
-  $( "#applicantagreed" ).fadeIn( "slow", function() {
+$( "#genagreed" ).click(function() {
+  $( "#genapplicantagreed" ).fadeIn( "slow", function() {
     // Animation complete
   });
 });

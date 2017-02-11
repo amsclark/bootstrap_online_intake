@@ -17,6 +17,7 @@
 <li>&#8226; Worker's compensation cases</li>
 <li>&#8226; Personal injury cases</li>
 </ul>
+<hr class="half-rule">
 <p>It is ok to have someone help you complete this application. The application should be completed using your personal information. We have to talk to you unless you have someone who is authorized to speak on your behalf.</p>
 
 <p>If you are Power of Attorney for the applicant, we can talk to you directly if you provide the Power of Attorney Document. Please complete the application in the applicant's name, indicate on the application that you are the power of attorney and send us the Power of Attorney document by email at accesslineattorneys@legalaidofnebraska.com, or by fax to (402) 348-1065, Attention: ElderAccessLine®, or by mail at ElderAccessLine® 1904 Farnam St., Suite 500, Omaha, NE 68102.</p>
@@ -26,8 +27,8 @@
 <p>Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
 
 <p>I have read the information above and agree to the terms described.</p>
-<button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
-<div style="display:none" id="applicantagreed">
+<button type="button" class="btn btn-primary btn-lg" id="eldagreed">I agree</button>
+<div style="display:none" id="eldapplicantagreed">
   <!-- Times block for Elder intake -->
   <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
   <div class="UNIT_ELD"> 
@@ -49,8 +50,8 @@
 </div>
 </div>
 <script>
-$( "#agreed" ).click(function() {
-  $( "#applicantagreed" ).fadeIn( "slow", function() {
+$( "#eldagreed" ).click(function() {
+  $( "#eldapplicantagreed" ).fadeIn( "slow", function() {
     // Animation complete
   });
 });

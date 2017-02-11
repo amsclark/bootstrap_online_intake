@@ -31,6 +31,7 @@ If not, please see below.<br>
 <li>&#8226; Worker's compensation cases</li>
 <li>&#8226; Personal injury cases</li>
 </ul>
+<hr class="half-rule">
 <p>It is okay to have someone help you complete this form. The form should be completed using your personal information. But, we cannot talk to someone about your question until we talk to you.<p>
 
 <p>You should expect to receive an email response about your question from Legal Aid of Nebraska within 5 business days. The email response will follow-up with a telephone call if you request it. If you do not hear back from us, it is your responsibility to contact us at the number above. Legal Aid of Nebraska is not responsible for any technical or human errors that may occur when processing your application.</p>
@@ -38,8 +39,8 @@ If not, please see below.<br>
 <p>Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
 
 I have read the above information and agree to the terms described.<br>
-<button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
-<div style="display:none" id="applicantagreed">
+<button type="button" class="btn btn-primary btn-lg" id="frmagreed">I agree</button>
+<div style="display:none" id="frmapplicantagreed">
     <!-- Times block for Farm intake -->
     <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
     <div class="UNIT_FARM"> 
@@ -61,8 +62,8 @@ I have read the above information and agree to the terms described.<br>
     </div>
 </div>
 <script>
-$( "#agreed" ).click(function() {
-  $( "#applicantagreed" ).fadeIn( "slow", function() {
+$( "#frmagreed" ).click(function() {
+  $( "#frmapplicantagreed" ).fadeIn( "slow", function() {
     // Animation complete
   });
 });

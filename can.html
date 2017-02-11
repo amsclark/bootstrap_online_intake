@@ -20,9 +20,9 @@
 
 <p>Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
 <p>I have read the information above and agree to the terms described.</p>
-<button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
+<button type="button" class="btn btn-primary btn-lg" id="canagreed">I agree</button>
 
-<div style="display:none" id="applicantagreed">
+<div style="display:none" id="canapplicantagreed">
     <!-- Times block for Cancer intake -->
     <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
     <div class="UNIT_CAN"> 
@@ -44,8 +44,8 @@
     </div>
 </div>
 <script>
-$( "#agreed" ).click(function() {
-  $( "#applicantagreed" ).fadeIn( "slow", function() {
+$( "#canagreed" ).click(function() {
+  $( "#canapplicantagreed" ).fadeIn( "slow", function() {
     // Animation complete
   });
 });

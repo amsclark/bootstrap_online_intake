@@ -25,13 +25,14 @@ We will reply to you by email.<br>
 <li>&#8226; Worker's compensation cases</li>
 <li>&#8226; Personal injury cases</li>
 </ul>
+<hr class="half-rule">
 <p>It is ok to have someone help you complete this application. The application should be completed using your personal information. But, we cannot talk to someone else about your legal problem until we talk to you.</p>
 <br>
 <p>You should expect to receive an email response about your application from Legal Aid of Nebraska within 5 business days. If it looks like you qualify for services from Legal Aid, we will schedule a call for you to talk to an intake paralegal. We will schedule the call based upon the best times you provide us in the application. We will tell you what day and time we will call you in our email response to you. If you do not hear back from us, it is your responsibility to contact us at the number above. Legal Aid of Nebraska is not responsible for any technical or human errors that may occur when processing your application. Remember to completely close out of the internet browser when you are finished. If you do not, you might accidentally share your personal information with someone else.</p>
 <br>
 I have read the above information and agree to the terms described.<br>
-<button type="button" class="btn btn-primary btn-lg" id="agreed">I agree</button>
-<div style="display:none" id="applicantagreed"> 
+<button type="button" class="btn btn-primary btn-lg" id="natagreed">I agree</button>
+<div style="display:none" id="natapplicantagreed"> 
         <!-- Times block for Native intake -->
         Mark ALL of the time periods you are available to receive a call from Legal Aid:
         <div class="UNIT_NAT"> 
@@ -54,8 +55,8 @@ I have read the above information and agree to the terms described.<br>
     </div>
 </div>
 <script>
-$( "#agreed" ).click(function() {
-  $( "#applicantagreed" ).fadeIn( "slow", function() {
+$( "#natagreed" ).click(function() {
+  $( "#natapplicantagreed" ).fadeIn( "slow", function() {
     // Animation complete
   });
 });
