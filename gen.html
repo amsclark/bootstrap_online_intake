@@ -1,14 +1,16 @@
 <div class="well" style="color:red">
   <p>Do not use this application if you have an emergency, such as a deadline or hearing within 14 days.</p>
 </div>
-
 <div>
   <p>Instead, please call us at 402-348-1060, or toll-free at 877-250-2016, Monday and Wednesday, 9 am — 11 am CST, and on Tuesday and Thursday from 1:30 pm — 3:30 pm CST.</p>
-  <p><strong>You must have an email address to use this online application.</strong></p>
+  <p><strong>You must have an email address to use this online application.</strong>
+  </p>
   <p>We will reply to you by email.</p>
-  <p><strong>We will ask you questions about your monthly household income and assets. If you do not have that information for all members of your household, please gather it, and then complete the application.</strong></p>
+  <p><strong>We will ask you questions about your monthly household income and assets. If you do not have that information for all members of your household, please gather it, and then complete the application.</strong>
+  </p>
   <p>Legal Aid of Nebraska will use the information you provide to see if you qualify for our services. However, completing an application does NOT mean that Legal Aid of Nebraska will accept your case. Legal Aid of Nebraska cannot assist everyone who applies for help. Completing an application does NOT create an attorney-client relationship. And, it does NOT mean you are a client of Legal Aid of Nebraska.</p>
-  <p><strong>Legal Aid of Nebraska cannot help with the following</strong></p>
+  <p><strong>Legal Aid of Nebraska cannot help with the following</strong>
+  </p>
   <ul class="list-unstyled">
     <li>&#8226; Traffic tickets</li>
     <li>&#8226; Criminal cases (unless they are filed in tribal court)</li>
@@ -16,7 +18,6 @@
     <li>&#8226; Personal injury cases</li>
   </ul>
 </div>
-
 <div>
   <hr class="half-rule">
   <p>It is ok to have someone help you complete this application. The application should be completed using your personal information. But, we cannot talk to someone else about your legal problem until we talk to you.</p>
@@ -28,47 +29,462 @@
   <button type="button" class="btn btn-primary btn-lg" id="genagreed">I agree</button>
   <br>
 </div>
-
-<div style="display:none" id="genapplicantagreed"> 
-  <br>
-  <p>* I understand I will be contacted by email. Only people I trust have access to the email address in my application</p>
+<div style="display:none" id="genapplicantagreed">
+  <hr class="half-rule">
+  <h3>Identifying Information</h3>
+  <hr class="half-rule">
   <div class="form-group">
-    <div class="checkbox">
+    <div class="col-sm-3">
+      <label for="first_name">First Name</label>
+      <input type="text" class="form-control" id="first_name" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="middle_initial">Middle Initial</label>
+      <input type="text" class="form-control" id="middle_initial" maxlength="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="last_name">Last Name</label>
+      <input type="text" class="form-control" id="last_name" required>
+      <br>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="suffix_name">Suffix</label>
+      <input type="text" class="form-control" id="suffix_name" maxlength="4">
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <h4>Aliases</h4>
+    <p>If you have gone by another name, such as a maiden name, list it here. Do not worry if you are unable to list all of your other names.</p>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="alias_first">First Name</label>
+      <input type="text" class="form-control" id="alias_first">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="alias_middle">Middle Initial</label>
+      <input type="text" class="form-control" id="alias_middle" maxlength="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="alias_last">Last Name</label>
+      <input type="text" class="form-control" id="alias_last">
+      <br>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <label for="alias_suffix">Suffix</label>
+      <input type="text" class="form-control" id="alias_suffix" maxlength="4">
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <hr class="half-rule">
+    <p>Provide the last four digits of your social security number or ITIN number, and your date of birth.</p>
+  </div>
+  <div class="col-sm-12 form-group">
+    <label for="ssn">SSN:</label>
+    <input type="number" class="form-control" id="ssn" max="9999" data-minlength="4" required>
+    <div class="help-block with-errors">Must be 4 digits</div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-4">
+      <label for="dobyear">Year</label>
+      <select class="form-control" id="dobyear">
+        <option disabled selected value> -- Select a Year -- </option>
+        <option>2020</option>
+        <option>2019</option>
+        <option>2018</option>
+        <option>2017</option>
+        <option>2016</option>
+        <option>2015</option>
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+        <option>2011</option>
+        <option>2010</option>
+        <option>2009</option>
+        <option>2008</option>
+        <option>2007</option>
+        <option>2006</option>
+        <option>2005</option>
+        <option>2004</option>
+        <option>2003</option>
+        <option>2002</option>
+        <option>2001</option>
+        <option>2000</option>
+        <option>1999</option>
+        <option>1998</option>
+        <option>1997</option>
+        <option>1996</option>
+        <option>1995</option>
+        <option>1994</option>
+        <option>1993</option>
+        <option>1992</option>
+        <option>1991</option>
+        <option>1990</option>
+        <option>1989</option>
+        <option>1988</option>
+        <option>1987</option>
+        <option>1986</option>
+        <option>1985</option>
+        <option>1984</option>
+        <option>1983</option>
+        <option>1982</option>
+        <option>1981</option>
+        <option>1980</option>
+        <option>1979</option>
+        <option>1978</option>
+        <option>1977</option>
+        <option>1976</option>
+        <option>1975</option>
+        <option>1974</option>
+        <option>1973</option>
+        <option>1972</option>
+        <option>1971</option>
+        <option>1970</option>
+        <option>1969</option>
+        <option>1968</option>
+        <option>1967</option>
+        <option>1966</option>
+        <option>1965</option>
+        <option>1964</option>
+        <option>1963</option>
+        <option>1962</option>
+        <option>1961</option>
+        <option>1960</option>
+        <option>1959</option>
+        <option>1958</option>
+        <option>1957</option>
+        <option>1956</option>
+        <option>1955</option>
+        <option>1954</option>
+        <option>1953</option>
+        <option>1952</option>
+        <option>1951</option>
+        <option>1950</option>
+        <option>1949</option>
+        <option>1948</option>
+        <option>1947</option>
+        <option>1946</option>
+        <option>1945</option>
+        <option>1944</option>
+        <option>1943</option>
+        <option>1942</option>
+        <option>1941</option>
+        <option>1940</option>
+        <option>1939</option>
+        <option>1938</option>
+        <option>1937</option>
+        <option>1936</option>
+        <option>1935</option>
+        <option>1934</option>
+        <option>1933</option>
+        <option>1932</option>
+        <option>1931</option>
+        <option>1930</option>
+        <option>1929</option>
+        <option>1928</option>
+        <option>1927</option>
+        <option>1926</option>
+        <option>1925</option>
+        <option>1924</option>
+        <option>1923</option>
+        <option>1922</option>
+        <option>1921</option>
+        <option>1920</option>
+        <option>1919</option>
+        <option>1918</option>
+        <option>1917</option>
+        <option>1916</option>
+        <option>1915</option>
+        <option>1914</option>
+        <option>1913</option>
+        <option>1912</option>
+        <option>1911</option>
+        <option>1910</option>
+        <option>1910</option>
+        <option>1909</option>
+        <option>1908</option>
+        <option>1907</option>
+        <option>1906</option>
+        <option>1905</option>
+        <option>1904</option>
+        <option>1903</option>
+        <option>1902</option>
+        <option>1901</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-4">
+      <label for="dobmonth">Month</label>
+      <select class="form-control" id="dobmonth">
+        <option disabled selected value> -- Select a Month -- </option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-4">
+      <label for="dobday">Day of Month</label>
+      <select class="form-control" id="dobday">
+        <option disabled selected value> -- Select a Day -- </option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <hr class="half-rule">
+    <h3>Contact Information</h3>
+    <hr class="half-rule">
+  </div>
+  <div class="form-group">
+    <div class="checkbox-inline">
       <label>
-        <input type="checkbox" id="emailsafe" data-error="You must indicate that it is safe for us to respond to your application by email. If you do not have a safe email address, please apply by telephone." required> I agree.
+        <input type="checkbox" id="emailsafe" data-error="You must indicate that it is safe for us to respond to your application by email. If you do not have a safe email address, please apply by telephone." required> I understand I will be contacted by email. Only people I trust have access to the email address in my application.
       </label>
       <div class="help-block with-errors">
       </div>
     </div>
   </div>
-  <hr class="half-rule">
   <p> Provide an Email Address where it is safe to contact you:</p>
   <div class="form-group">
-    <label for="eml" class="control-label">Email Address:</label>
-    <input type="email" class="form-control" id="eml" placeholder="Email" required>
+    <div class="col-sm-6">
+      <label for="eml" class="control-label">Email Address:</label>
+      <input type="email" class="form-control" id="eml" placeholder="Email" required>
+    </div>
   </div>
   <div class="form-group">
-    <label for="eml">Confirm Email Address:</label>
-    <input type="email" class="form-control" id="emlconfirm" data-match="#eml" data-match-error="Oops, these don't match!" placeholder="confirm" required>
-    <div class="help-block with-errors"></div>
+    <div class="col-sm-6">
+      <label for="eml">Confirm Email Address:</label>
+      <input type="email" class="form-control" id="emlconfirm" data-match="#eml" data-match-error="Oops, these don't match!" placeholder="confirm" required>
+      <div class="help-block with-errors"></div>
+    </div>
   </div>
-  <hr class="half-rule">
-  <p>Mark ALL of the time periods you are available to receive a call from Legal Aid:</p>
-  <div class="UNIT_AL"> 
+  <div class="col-sm-12">
+    <hr class="half-rule">
+  </div>
+  <h4>Provide a safe mailing address</h4>
+  <div class="col-sm-9 form-group">
+    <label for="address">Street Address / PO Box:</label>
+    <input type="text" class="form-control" id="address">
+  </div>
+  <div class="col-sm-3 form-group">
+    <label for="aptnum">Apartment or Lot Number:</label>
+    <input type="text" class="form-control" id="aptnum">
+  </div>
+  <div class="col-sm-6 form-group">
+    <label for="city">City</label>
+    <input type="text" class="form-control" id="City">
+  </div>
+  <div class="col-sm-3 form-group">
+    <label for="state">State</label>
+    <select class="form-control" id="state">
+      <option disabled selected value> -- Please Choose a State -- </option>
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      <option value="DE">Delaware</option>
+      <option value="DC">District Of Columbia</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+      <option value="HI">Hawaii</option>
+      <option value="ID">Idaho</option>
+      <option value="IL">Illinois</option>
+      <option value="IN">Indiana</option>
+      <option value="IA">Iowa</option>
+      <option value="KS">Kansas</option>
+      <option value="KY">Kentucky</option>
+      <option value="LA">Louisiana</option>
+      <option value="ME">Maine</option>
+      <option value="MD">Maryland</option>
+      <option value="MA">Massachusetts</option>
+      <option value="MI">Michigan</option>
+      <option value="MN">Minnesota</option>
+      <option value="MS">Mississippi</option>
+      <option value="MO">Missouri</option>
+      <option value="MT">Montana</option>
+      <option value="NE">Nebraska</option>
+      <option value="NV">Nevada</option>
+      <option value="NH">New Hampshire</option>
+      <option value="NJ">New Jersey</option>
+      <option value="NM">New Mexico</option>
+      <option value="NY">New York</option>
+      <option value="NC">North Carolina</option>
+      <option value="ND">North Dakota</option>
+      <option value="OH">Ohio</option>
+      <option value="OK">Oklahoma</option>
+      <option value="OR">Oregon</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="RI">Rhode Island</option>
+      <option value="SC">South Carolina</option>
+      <option value="SD">South Dakota</option>
+      <option value="TN">Tennessee</option>
+      <option value="TX">Texas</option>
+      <option value="UT">Utah</option>
+      <option value="VT">Vermont</option>
+      <option value="VA">Virginia</option>
+      <option value="WA">Washington</option>
+      <option value="WV">West Virginia</option>
+      <option value="WI">Wisconsin</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label for="zip">Zip</label>
+    <input type="number" class="form-control" id="zip" maxlength="5" required>
+  </div>
+  <div class="form-group has-feedback">
+    <label for="phone" class="control-label">Provide a safe phone number to reach you in the format XXX-XXX-XXXX</label>
+    <input type="text" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" id="phone" maxlength="12" date-minlength="12" placeholder="123-456-7890" required>
+  </div>
+  If possible, we would like to have your permission to contact you by text message at the number given above.
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="text_consent" value="agree" required>Yes, I agree to being contacted by text message.</label>
+      <br>
+      <label>
+        <input type="radio" name="text_consent" value="disagree">I do not agree to being contacted by text message, or the above phone number cannot receive text messages.</label>
+      <br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="phone">If you have an alternate phone number we may contact you at, please provide it here in the format XXX-XXX-XXXX</label>
+    <input type="text" class="form-control" id="phone" maxlength="12" data-minlength="10">
+  </div>
+  Do you need an interpreter?
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="interpreter" value="yes" required>Yes</label>
+      <br>
+      <label>
+        <input type="radio" name="interpreter" value="no">No</label>
+      <br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="language">If you do need an interpreter, what language should the interpreter speak?</label>
+    <select name="language" id="language" class="form-control">
+      <option value="">&nbsp;</option>
+      <option value="A">Albanian</option>
+      <option value="B">Cambodian</option>
+      <option value="C">Creole</option>
+      <option value="D">Somali</option>
+      <option value="E">English</option>
+      <option value="F">French</option>
+      <option value="G">German</option>
+      <option value="H">Sign Language</option>
+      <option value="I">Italian</option>
+      <option value="J">Japanese</option>
+      <option value="L">Hmong</option>
+      <option value="M">Mandarin</option>
+      <option value="N">Native American</option>
+      <option value="O">Other</option>
+      <option value="P">Polish</option>
+      <option value="Q">Arabic</option>
+      <option value="R">Russian</option>
+      <option value="S">Spanish</option>
+      <option value="T">Turkish</option>
+      <option value="V">Vietnamese</option>
+      <option value="W">Serbian</option>
+      <option value="X">Cantonese</option>
+      <option value="Y">Yiddish</option>
+      <option value="z">Nuer</option>
+      <option value="aa">Dinka</option>
+      <option value="bb">Nubian</option>
+      <option value="K">Karen</option>
+    </select>
+  </div>
+
+  Do you use a telecommunication device or relay system for the hearing and speach-impaired?
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="hearingimpairment" value="yes" required>Yes</label>
+      <br>
+      <label>
+        <input type="radio" name="hearingimpairment" value="no">No</label>
+      <br>
+    </div>
+  </div>
+  <label for="gentimes">Please select all of the times you would be able to receive a call to complete the application process</label>
+  <div id="gentimes" class="UNIT_AL">
     <div class="checkbox">
-      <label><input type="checkbox" name="monfullpm" value="">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" name="monfullpm" value="monfullpm">Mondays between 12:30PM and 4:00PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" name="tuefullam" value="">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" name="tuefullam" value="tuefullam">Tuesdays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" name="wedfullpm" value="wedfullpm">Wednesdays between 12:30PM and 4:00PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" name="thufullam" value="thufullam">Thursdays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
+      <label>
+        <input type="checkbox" name="frifullam" value="frifullam">Fridays between 8:30AM and 12:30PM Central Standard Time</label>
     </div>
   </div>
   <div class="form-group">
@@ -76,9 +492,9 @@
   </div>
 </div>
 <script>
-$( "#genagreed" ).click(function() {
-  $( "#genapplicantagreed" ).fadeIn( "slow", function() {
-    // Animation complete
+  $("#genagreed").click(function() {
+    $("#genapplicantagreed").fadeIn("slow", function() {
+      // Animation complete
+    });
   });
-});
 </script>

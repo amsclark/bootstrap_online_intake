@@ -7,9 +7,7 @@ echo "\t<link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstr
 echo "\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n";
 echo "\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n";
 echo "\t<script src=\"js/validator.js\"></script>\n";
-echo "</head>\n";
 
-echo "<body>\n";
 include 'bootstrap_onlineintake.html';
 
 echo "<div id=\"CANCER\" class=\"appblock\" style=\"display: none\">";
@@ -40,7 +38,7 @@ echo "<div id=\"GENERAL\" class=\"appblock\" style=\"display: none\">";
 include 'allengexceptfrm.html';
 include 'gen.html';
 echo "</div>";
-
+echo "</form>\n";
 echo "</body>\n";
 echo "</html>\n";
 

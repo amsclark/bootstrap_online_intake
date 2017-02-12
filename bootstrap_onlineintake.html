@@ -1,28 +1,26 @@
 <script>
-$(document).ready(function() {
-  $("input[name='appselector']").change(function(){
-    $('.appblock').hide();
-    console.log("appblock hidden");
-    $('#' + $(this).val()).show();
-    console.log("block shown");
+  $(document).ready(function() {
+    $("input[name='appselector']").change(function(){
+      $('.appblock').hide();
+      console.log("appblock hidden");
+      $('#' + $(this).val()).show();
+      console.log("block shown");
+    });
   });
-});
 </script>
 </head>
 <body>
-<h2>Choose the sentence that best describes you, or the person who is applying for services: </h2>
-<h2>Elige la frase que mejor le describe a usted o a la persona que solicita nuestros servicios:</h2>
-<form data-toggle="validator" role="form" style="margin-left: 30px; margin-right: 30px">
-<div class="form-group">
-  <div id="appselectorgroup" class="radio">
-    <label><input type="radio" name="appselector" value="NATIVE">I am Native American or have a case in tribal court.</label><br>
-    <label><input type="radio" name="appselector" value="FARM">I am a Farmer or Rancher.</label><br>
-    <label><input type="radio" name="appselector" value="ELDER">I am 60 years of age or older.</label><br>
-    <label><input type="radio" name="appselector" value="CANCER">I have been diagnosed with breast cancer.</label><br>
-    <label><input type="radio" name="appselector" value="DISASTER">I am a victim of a recent disaster, such as a flood, tornado or train derailment.</label><br>
-    <label><input type="radio" name="appselector" value="GENERAL" >None of the above choices apply to me.</label><br>
-    <label><input type="radio" name="appselector" value="SPANISH" required>El español es mi idioma materno, o prefiero hablar en español.</label><br>
+  <h2>Choose the sentence that best describes you, or the person who is applying for services: </h2>
+  <h2>Elige la frase que mejor le describe a usted o a la persona que solicita nuestros servicios:</h2>
+  <form data-toggle="validator" role="form" style="margin-left: 30px; margin-right: 30px">
+  <div class="form-group">
+    <div id="appselectorgroup" class="radio">
+      <label><input type="radio" name="appselector" value="NATIVE">I am Native American or have a case in tribal court.</label><br>
+      <label><input type="radio" name="appselector" value="FARM">I am a Farmer or Rancher.</label><br>
+      <label><input type="radio" name="appselector" value="ELDER">I am 60 years of age or older.</label><br>
+      <label><input type="radio" name="appselector" value="CANCER">I have been diagnosed with breast cancer.</label><br>
+      <label><input type="radio" name="appselector" value="DISASTER">I am a victim of a recent disaster, such as a flood, tornado or train derailment.</label><br>
+      <label><input type="radio" name="appselector" value="GENERAL" >None of the above choices apply to me.</label><br>
+      <label><input type="radio" name="appselector" value="SPANISH" required>El español es mi idioma materno, o prefiero hablar en español.</label><br>
+    </div>
   </div>
-</div>
-
-
